@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_partner_form">
+            <field name="name">res.partner.form</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="model">res.partner</field>
+            <field name="priority">150</field>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="before">
+                    <button class="oe_stat_button" type="object" name="edit_messages" icon="fa-envelope-o" context="{'res_id': active_id, 'model': 'res.partner'}">
+                            <field string="Messages" name="message_count" widget="statinfo"/>
+                        </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

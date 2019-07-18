@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="crm_case_form_view_oppor">
+            <field name="name">crm.lead.form.opportunity</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="model">crm.lead</field>
+            <field name="priority">150</field>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_schedule_meeting']" position="before">
+                    <button class="oe_stat_button" type="object" name="edit_messages" icon="fa-envelope-o" context="{'res_id': active_id, 'model': 'res.partner'}">
+                            <field string="Messages" name="message_count" widget="statinfo"/>
+                        </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
