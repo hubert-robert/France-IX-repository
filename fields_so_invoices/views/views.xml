@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+
+    <record id="po_ref_on_subscription" model="ir.ui.view">
+      <field name="name">po_ref_on_subscription</field>
+      <field name="model">sale.subscription</field>
+      <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <field name="po_reference"/>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="po_ref_on_invoice" model="ir.ui.view">
+      <field name="name">po_ref_on_invoice</field>
+      <field name="model">account.invoice</field>
+      <field name="inherit_id" ref="account.invoice_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <field name="po_reference_on_invoice"/>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>

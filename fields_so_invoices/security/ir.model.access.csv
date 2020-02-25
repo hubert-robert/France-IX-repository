@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fields_so_invoices_fields_so_invoices,fields_so_invoices.fields_so_invoices,model_fields_so_invoices_fields_so_invoices,,1,0,0,0
