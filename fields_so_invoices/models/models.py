@@ -37,7 +37,7 @@ class SaleSubscriptionsWithPO(models.Model):
     def _recurring_create_invoice(self, automatic=False):
         self.ensure_one()
 
-        invoices = super(SaleSubscriptionsWithPO, self)._recurring_create_invoice()
+        invoices = super(SaleSubscriptionsWithPO, self)._recurring_create_invoice(automatic)
 
         for invoice in invoices:
             sub_ids = invoice.mapped('invoice_line_ids').mapped('subscription_id')
