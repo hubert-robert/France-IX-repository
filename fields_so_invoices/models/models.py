@@ -35,7 +35,7 @@ class SaleSubscriptionsWithPO(models.Model):
     _inherit='sale.subscription'
 
     def _recurring_create_invoice(self, automatic=False):
-        self.ensure_one()
+        # self.ensure_one()
 
         invoices = super(SaleSubscriptionsWithPO, self)._recurring_create_invoice(automatic)
 
